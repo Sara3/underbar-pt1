@@ -26,4 +26,9 @@ describe('indexOf()', () => {
     expect(_.indexOf(arr, 'bar', 2)).toBe(3);
   });
 
+  it('returns first index if did not give an input', ()=>{
+    const arr = [];
+    expect(_.indexOf(arr, "a")).toBe(-1);
+  });
+
 });

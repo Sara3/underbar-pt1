@@ -23,4 +23,10 @@ describe('filter()', () => {
     const abilityScores = _.filter(characterAttributes, (value) => !isNaN(value));
     expect(abilityScores).toEqual([4, 7, 10, 16, 5, 4]);
   });
+
+  it('filters all the even numbers ', ()=>{
+    const arr =[2,4,5,6,7];
+    const even =_.filter(arr, num=>num%2===0);
+    expect(even).toEqual([2,4,6]);
+  });
 });

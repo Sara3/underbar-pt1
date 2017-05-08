@@ -39,5 +39,13 @@ describe('each()', () => {
     });
     expect(count).toBe(3);
   });
+
+  it('it adds one to each value of an array', ()=>{
+    const arr =[1];
+    _.each(arr, function(element, index, arr){
+      expect(element+1).toEqual(arr[0]+1);
+    });
+  });
+
 });
 

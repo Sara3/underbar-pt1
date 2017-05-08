@@ -11,4 +11,10 @@ describe('pluck()', () => {
     expect(result).toEqual([12, 999, 14]);
   });
 
+  it('returns undefined if the key is not present', ()=>{
+    const arr=[{name: 'lisa'}];
+    const res =_.pluck(arr, 'timeStamp');
+    expect(res).toEqual([undefined]);
+  })
+
 });

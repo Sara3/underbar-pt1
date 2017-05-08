@@ -18,4 +18,15 @@ describe('reject()', () => {
     const orderItems = _.reject(order, (value) => value === null);
     expect(orderItems).toEqual(['burger', 'ketchup', 'cookie']);
   });
+
+  it('reject numbers from objects', ()=>{
+    const obj ={
+      car: 22,
+      com: "my car is black",
+      what: "is your car ",
+      my: 4
+    };
+    const strings = _.reject(obj, value => !isNaN(value));
+    expect(strings).toEqual(["my car is black","is your car "]);
+  });
 });

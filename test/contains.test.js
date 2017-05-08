@@ -31,4 +31,9 @@ describe('contains()', () => {
     expect(_.contains(ponies, 'Applejack')).toBe(false);
   });
 
+  it('returns false when called on variables even if the value exist', ()=>{
+    const variable = 'fluffy';
+    expect(_.contains(variable, 'fluffy')).toBe(false);
+  })
+
 });

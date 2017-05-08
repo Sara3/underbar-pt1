@@ -17,5 +17,20 @@ describe('every()', () => {
       expect(_.every(nums, num => num % 2 === 1)).toBe(false);
     });
 
+    it('returns true if asked for even number and all the values of objects are even',()=>{
+      const obj ={
+        car: 8,
+        black:2
+      };
+      expect(_.every(obj, num => num % 2 === 0 )).toBe(true);
+    });
+    it('returns false if asked for even number and all the values of objects are not even',()=>{
+      const obj ={
+        car: 7,
+        black:2
+      };
+      expect(_.every(obj, num => num % 2 === 0 )).toBe(false);
+    });
+
   });
 });

@@ -13,4 +13,13 @@ describe('reduce()', () => {
     expect(result).toEqual(15);
   });
 
+  it('reduces an object to a sum', ()=>{
+    const obj ={
+      col: 3,
+      row: 6
+    }
+    const res = _.reduce(obj, (a, b)=>a*b);
+    expect(res).toEqual(18);
+  });
+
 });
