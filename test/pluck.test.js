@@ -15,6 +15,6 @@ describe('pluck()', () => {
     const arr=[{name: 'lisa'}];
     const res =_.pluck(arr, 'timeStamp');
     expect(res).toEqual([undefined]);
-  })
+  });
 
 });
